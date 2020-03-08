@@ -46,7 +46,7 @@ int main() {
 	cl_context context = clCreateContext(NULL, 1, &device, NULL, NULL, &status);
 	
 	// Create a command-queue with a device
-	cl_command_queue cmdQueue = clCreateCommandQueueWithProperties(context,device,0,&status);
+	cl_command_queue cmdQueue = clCreateCommandQueue(context,device,0,&status);
 
 	// Create buffers for kernel
 	cl_mem bufA = clCreateBuffer(context, CL_MEM_READ_ONLY, datasize,NULL,&status);
